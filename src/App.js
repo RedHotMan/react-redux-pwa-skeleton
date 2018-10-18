@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getOwnerName } from './actions/owner';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/images/logo.svg';
+import './css/App.css';
 
 class App extends Component {
   componentDidMount() {
