@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { getOwnerName } from './actions/owner';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.getOwnerName();
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h1>Hello world, this is react-redux-pwa-skeleton by {this.props.owerName}</h1>
         </header>
       </div>
     );
   }
 }
 
-export default App;
+// use (state) to call the entire app state
+const mapStateToProps = ({ ownerNameReducer}) => {
+  return {
+    owerName: ownerNameReducer.ownerName,
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    getOwnerName: () => dispatch(getOwnerName())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
