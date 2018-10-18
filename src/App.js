@@ -1,10 +1,17 @@
+// @flow
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getOwnerName } from './actions/owner';
 import logo from './assets/images/logo.svg';
 import './css/App.css';
 
-class App extends Component {
+type Props = {
+  getOwnerName: Function,
+  owerName: string,
+}
+
+class App extends Component<Props> {
   componentDidMount() {
     this.props.getOwnerName();
   }
