@@ -1,9 +1,9 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
 
-import ownerNameReducer from './owner';
+import ownerNameReducer from "./owner";
 
 const appReducer = combineReducers({
-  ownerNameReducer,
+  ownerNameReducer
 });
 
 export default appReducer;

@@ -30,7 +30,10 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "flow-bin": "^0.83.0",
+    "prettier": "^1.14.3",
     "redux-devtools": "^3.4.1"
   }
 }

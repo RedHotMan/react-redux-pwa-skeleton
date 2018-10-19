@@ -1,8 +1,8 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import App from '../App';
+import React from "react";
+import { shallow } from "enzyme";
+import App from "../App";
 
-it('renders without crashing', () => {
+it("renders without crashing", () => {
   const wrapper = shallow(<App />);
   expect(wrapper).toBeDefined();
 });
