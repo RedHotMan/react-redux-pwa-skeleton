@@ -1,44 +1,23 @@
 // @flow
 
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { getOwnerName } from './actions/owner';
-import logo from './assets/images/logo.svg';
+import { Switch, Route } from 'react-router';
+import Home from './components/Home';
+import About from './components/About';
 import './css/App.css';
+import './css/buttons.css';
 
-type Props = {
-  getOwnerName: Function,
-  owerName: string,
-}
+type Props = {};
 
-class App extends Component<Props> {
-  componentDidMount() {
-    this.props.getOwnerName();
-  }
-
+export default class App extends Component<Props> {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1>Hello world, this is react-redux-pwa-skeleton by {this.props.owerName}</h1>
-        </header>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/about" component={About}></Route>
+        </Switch>
       </div>
     );
   }
 }
-
-// use (state) to call the entire app state
-const mapStateToProps = ({ ownerNameReducer}) => {
-  return {
-    owerName: ownerNameReducer.ownerName,
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    getOwnerName: () => dispatch(getOwnerName())
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);
