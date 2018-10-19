@@ -1,4 +1,4 @@
-export const OWNER_NAME = 'OWNER_NAME';
+export const OWNER_NAME = "OWNER_NAME";
 
 export function getOwnerName() {
   return {
@@ -6,5 +6,5 @@ export function getOwnerName() {
     payload: {
       ownerName: "Ilyaçe Regaibi"
     }
-  }
+  };
 }
