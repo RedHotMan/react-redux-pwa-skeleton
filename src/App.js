@@ -16,6 +16,7 @@ export default class App extends Component<Props> {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
+          <Route component={() => <div>404 Not found </div>} />
         </Switch>
       </div>
     );

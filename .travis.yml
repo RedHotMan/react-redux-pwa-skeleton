@@ -1,6 +1,13 @@
 language: node_js
 node_js:
-  - stable
+  - "stable"
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
 
 script:
   - echo "Script step"
@@ -25,6 +32,5 @@ deploy:
   skip-cleanup: true
   local_dir: build
   github-token: $GITHUB_TOKEN
-  keep-history: true
   on:
     branch: master
