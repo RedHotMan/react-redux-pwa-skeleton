@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - stable
+
+script:
+  - echo "Script step"
+  - npm run lint
+  - npm run test
+  - npm run build
+
+notifications:
+  email: false
+
+after_success:
+  - echo "After Success Step"
+
+after_failure:
+  - echo "After failure Step"
+
+before_deploy:
+  - echo "Before Deploy Step."
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local_dir: build
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
