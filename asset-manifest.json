@@ -1,0 +1,14 @@
+{
+  "main.css": "/react-redux-pwa-skeleton/static/css/main.9b03af0c.chunk.css",
+  "main.js": "/react-redux-pwa-skeleton/static/js/main.a8a47f33.chunk.js",
+  "main.js.map": "/react-redux-pwa-skeleton/static/js/main.a8a47f33.chunk.js.map",
+  "static/js/1.d2786638.chunk.js": "/react-redux-pwa-skeleton/static/js/1.d2786638.chunk.js",
+  "static/js/1.d2786638.chunk.js.map": "/react-redux-pwa-skeleton/static/js/1.d2786638.chunk.js.map",
+  "runtime~main.js": "/react-redux-pwa-skeleton/static/js/runtime~main.9902f1ab.js",
+  "runtime~main.js.map": "/react-redux-pwa-skeleton/static/js/runtime~main.9902f1ab.js.map",
+  "static/media/logo.svg": "/react-redux-pwa-skeleton/static/media/logo.5d5d9eef.svg",
+  "static/css/main.9b03af0c.chunk.css.map": "/react-redux-pwa-skeleton/static/css/main.9b03af0c.chunk.css.map",
+  "index.html": "/react-redux-pwa-skeleton/index.html",
+  "precache-manifest.9225c03da152ca23d8c0cbec9bfe85dd.js": "/react-redux-pwa-skeleton/precache-manifest.9225c03da152ca23d8c0cbec9bfe85dd.js",
+  "service-worker.js": "/react-redux-pwa-skeleton/service-worker.js"
+}
